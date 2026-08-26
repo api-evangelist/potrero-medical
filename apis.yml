@@ -1,7 +1,14 @@
 aid: potrero-medical
 name: Potrero Medical
-description: 'Potrero Medical is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+description: 'Potrero Medical — which completed a restructuring and now operates as Accuryn
+  Medical — is a Hayward, California predictive-health medical device company founded in
+  2012. Its FDA-cleared Accuryn Monitoring System turns a Foley catheter into a critical-care
+  sensor, automatically measuring urine output, intra-abdominal pressure and core body
+  temperature so clinicians can detect acute kidney injury, sepsis and abdominal compartment
+  syndrome earlier while reducing CAUTI risk. The monitor reaches the EMR through Capsule
+  medical device integration rather than a first-party developer API: as of August 2026 the
+  company publishes no public API, SDK, developer portal or machine-readable contract of any
+  kind, and its only web surface is a WordPress marketing site at accuryn.com.'
 url: https://raw.githubusercontent.com/api-evangelist/potrero-medical/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
@@ -12,6 +19,12 @@ created: '2026-08-26'
 modified: '2026-08-26'
 tags:
 - Company
+- Medical Devices
+- Healthcare
+- Patient Monitoring
+- Critical Care
+- Medical Device Integration
+- Predictive Health
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -19,5 +32,51 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: LLMsTxt
+  url: llms/potrero-medical-llms.txt
+- type: DomainSecurity
+  url: security/potrero-medical-domain-security.yml
 - type: Website
-  url: https://forgeglobal.com/potrero-medical_stock/
+  url: https://accuryn.com/
+- type: About
+  url: https://accuryn.com/company/
+- type: Product
+  url: https://accuryn.com/product/
+- type: Blog
+  url: https://accuryn.com/knowledgehub/
+- type: BlogRSS
+  url: https://accuryn.com/feed/
+- type: Support
+  url: https://accuryn.com/support/
+- type: PrivacyPolicy
+  url: https://accuryn.com/privacy-policy/
+- type: LinkedIn
+  url: https://www.linkedin.com/company/potrero-medical/
+- type: YouTube
+  url: https://www.youtube.com/@accurynmedical8399/
+x-enrichment:
+  date: '2026-08-26'
+  status: minimal
+  artifacts_added: 4
+  pass: local-v1
+x-coverage:
+  state: none
+  reason: no-developer-program
+  detail: >-
+    Potrero Medical (now Accuryn Medical) ships a regulated hardware monitor whose data
+    reaches the EMR through third-party Capsule medical device integration, and its entire
+    web presence is a WordPress marketing site — accuryn.com/openapi.json and every
+    /.well-known/ path return 404, api./docs./developer.accuryn.com do not resolve, and
+    GitHub, npm and PyPI hold no first-party code.
+  evidence:
+  - url: https://accuryn.com/openapi.json
+    status: 404
+  - url: https://accuryn.com/.well-known/api-catalog
+    status: 404
+  - url: https://accuryn.com/.well-known/agent-card.json
+    status: 404
+  - url: https://potreromed.com/
+    status: 200
+  - url: https://api.accuryn.com/
+    status: 0
+  checked: '2026-08-26'

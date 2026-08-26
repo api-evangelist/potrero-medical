@@ -1,0 +1,18 @@
+generated: '2026-08-26'
+method: searched
+source: https://accuryn.com/request-a-quote/
+plan_count: 0
+note: >-
+  Potrero Medical (Accuryn Medical) publishes no pricing of any kind. The Accuryn
+  Monitoring System is capital medical equipment plus a disposable catheter kit sold
+  through a hospital purchasing motion — the only commercial surface on the site is a
+  "Request a Quote" form (HTTP 200) and a demo request landing page. There is no plan,
+  tier, quota or list price to record, and no API product to price. The catheter kits
+  are packaged and distributed by Medline Industries, so unit pricing that does exist
+  sits in a distributor contract rather than on the vendor's site.
+plans: []
+evidence:
+- url: https://accuryn.com/request-a-quote/
+  status: 200
+- url: https://accuryn.com/lp/accuryn-monitoring-system-demo/
+  status: 200

@@ -1,0 +1,45 @@
+generated: '2026-08-26'
+method: probed
+source: >-
+  Live unauthenticated GET probes of the standard /.well-known/ paths on every host
+  Potrero Medical (Accuryn Medical) serves — accuryn.com and the legacy potreromed.com,
+  which 301s to accuryn.com. No path returned a document; every probe 404d, so no
+  WellKnown or SecurityTxt pointer is emitted in apis.yml. This is a recorded absence,
+  not an unchecked gap.
+note: >-
+  accuryn.com is a WordPress/Elementor marketing site. WordPress hosts commonly answer
+  200 for arbitrary /.well-known/* paths; this one does not — it returns a real 404 for
+  each, so the absences below are trustworthy rather than SPA-shell false negatives.
+hosts:
+- host: accuryn.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+- host: potreromed.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
